@@ -1,0 +1,14 @@
+i=zeros(90,90);             #create 90*90 pixel black image
+
+for(x=1:90)                 #for rows
+  for(y=1:90)               #for column
+    if(x>60)
+      i(x,y)=127;           #gray color
+    elseif(x>30)
+      i(x,y)=255;           #white color
+    end 
+  end
+end
+
+i=uint8(i);                 #image conversion from 16 to 8 bit
+imshow(i);                  #display resultant image
